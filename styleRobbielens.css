@@ -1,3 +1,105 @@
+* {
+	margin:0; /* Reset des marges du navigateurs */
+}
+
+/* -- CONTENU GENERAL  ------------------------ */
+/* ------------------------------------ */
+
+.main_page {
+	background-color:#1F2039;
+	font-family:"Manrope",sans-serif;
+	font-size:1em;
+}
+
+h1 {
+	color:#A5B4FC;
+	font-family:"Montserrat", sans-serif;
+	font-size:3.5em;
+}
+
+p {
+	color:#F9F8FF;
+	font-family:"Manrope",sans-serif;
+	font-size:1.1em;
+
+}
+
+a {
+	color:#000000;
+	font-family:"Manrope",sans-serif;
+	font-size:1em;
+	text-decoration:none;
+}
+
+.cta {
+	background:linear-gradient(#8E86B5,#ACAEED);
+	border-radius:50px;
+	color:#FFFFFF;
+	padding:20px;
+	text-transform:uppercase;
+}
+
+.header,
+.footer {
+	background-color:#FFFFFF;
+	padding: 20px 50px 20px 50px;
+}
+
+/*-- ACCUEIL ---------------------- */
+/*--------------------------------- */
+
+#accueil {
+	padding:80px;
+}
+
 .important {
 	color:#A5B4FC;
+	font-style:normal;
+}
+
+
+/* -- A PROPOS ------------------------- */
+/* ------------------------------------- */
+
+h2 {
+	color:#F9F8FF;
+}
+
+#a_propos {
+	margin:auto;
+	padding:80px;
+	width:50%;
+}
+
+.carre_contenu {
+	border-right:1px #A5B4FC solid;
+	border-bottom:1px #A5B4FC solid;
+	padding:50px 30px 30px 30px;
+}
+
+.service {
+	margin-top:50px;
+	margin-bottom:20px;
+}
+
+ul li {
+	font-family:"Manrope",sans-serif;
+	font-size:1em;
+	color:#F9F8FF;
+}
+	
+
+/* -- ANIMATIONS ------------------------------ */
+/* -------------------------------------------- */
+
+.logo:hover {
+	opacity:50%;
+}
+
+.cta:hover {
+	background:linear-gradient(#696484,#8788BA);
+}
+
+header a:hover {
+	text-decoration:underline;
 }
