@@ -45,16 +45,95 @@ a {
 	padding: 20px 50px 20px 50px;
 }
 
+/* -- HEADER  ------------------------ */
+/* ---------------------------------- */
+
+.header {
+	align-items:center;
+	display:flex;
+	justify-content:space-between;
+}
+
+header .logo {
+	flex:2;
+}
+
+.headerLien {
+	display:flex;
+	flex:1;
+	justify-content:space-between;
+}
+
+
+/* -- FOOTER -------------------- */
+/* ------------------------------ */
+
+.footer {
+	display:flex;
+	justify-content:space-between;
+}
+
+footer a {
+	margin-left:30px;
+}
+
+
 /*-- ACCUEIL ---------------------- */
 /*--------------------------------- */
 
+
+.accueilConteneur {
+	align-items:center;
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+	margin:auto;
+	/*width:50%;*/
+}
+
+.accueilTexte {
+	width:30%;
+}
+
+
 #accueil {
+	background-color:#1F2039;
 	padding:80px;
 }
 
 .important {
 	color:#A5B4FC;
 	font-style:normal;
+}
+
+/* -- MON DERNIER PROJET ----------------- */
+/* --------------------------------------- */
+
+#dernierProjet {
+	background-color:#FFFFFF;
+	padding-top:80px;
+	padding-bottom:80px;
+}
+
+#dernierProjet h2 {
+	color:#000000;
+	padding-bottom:60px;
+	text-align:center;
+
+}
+
+.lignePhotos1 img, .lignePhotos2 img {
+	margin:8px;
+}
+
+.lignePhotos1 {
+	display:flex;
+	justify-content:center;
+}
+
+.lignePhotos2 {
+	display:flex;
+	justify-content:center;
 }
 
 
@@ -66,6 +145,7 @@ h2 {
 }
 
 #a_propos {
+	background-color:#1F2039;
 	margin:auto;
 	padding:80px;
 	width:50%;
