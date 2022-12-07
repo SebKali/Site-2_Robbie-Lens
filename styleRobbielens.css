@@ -39,6 +39,10 @@ a {
 	text-transform:uppercase;
 }
 
+.boutonCta {
+	margin-top:50px;
+}
+
 .header,
 .footer {
 	background-color:#FFFFFF;
@@ -81,9 +85,15 @@ footer a {
 /*-- ACCUEIL ---------------------- */
 /*--------------------------------- */
 
+#accueil {
+	background-color:#1F2039;
+	margin:auto;
+	padding:80px;
+	width:60%;
+}
 
 .accueilConteneur {
-	align-items:center;
+	align-items:flex-start;
 	display:flex;
 	flex-direction:row;
 	justify-content:space-around;
@@ -92,14 +102,9 @@ footer a {
 }
 
 .accueilTexte {
-	width:30%;
+	margin-right:80px;
 }
 
-
-#accueil {
-	background-color:#1F2039;
-	padding:80px;
-}
 
 .important {
 	color:#A5B4FC;
@@ -111,8 +116,8 @@ footer a {
 
 #dernierProjet {
 	background-color:#FFFFFF;
-	padding-top:80px;
 	padding-bottom:80px;
+	padding-top:80px;
 }
 
 #dernierProjet h2 {
@@ -140,26 +145,35 @@ footer a {
 /* -- A PROPOS ------------------------- */
 /* ------------------------------------- */
 
-h2 {
-	color:#F9F8FF;
-}
 
 #a_propos {
 	background-color:#1F2039;
 	margin:auto;
 	padding:80px;
-	width:50%;
+	width:35%;
+}
+
+#a_propos .boutonCta {
+	text-align:center;
+}
+
+h2 {
+	color:#F9F8FF;
 }
 
 .carre_contenu {
-	border-right:1px #A5B4FC solid;
 	border-bottom:1px #A5B4FC solid;
+	border-right:1px #A5B4FC solid;
 	padding:50px 30px 30px 30px;
 }
 
 .service {
-	margin-top:50px;
 	margin-bottom:20px;
+	margin-top:50px;
+}
+
+ul {
+	margin-top:30px;
 }
 
 ul li {
@@ -167,7 +181,85 @@ ul li {
 	font-size:1em;
 	color:#F9F8FF;
 }
-	
+
+
+.barreBlanche {
+	background-color:#FFFFFF;
+	height:10px;
+}
+
+/* -- Tarifs -------------------------------- */
+/* ------------------------------------------ */
+
+#tarifs {
+	padding-top:100px;
+	padding-bottom:100px;
+}
+
+#tarifs h2 {
+	text-align:center;
+	padding-bottom:50px;
+}
+
+table {
+	border-collapse:collapse;
+	color:#FFFFFF;
+	margin:auto;
+
+}
+
+th {
+	border:1px solid #FFFFFF;
+	padding-top:40px;
+	padding-bottom:40px;
+}
+
+td {
+	border:1px solid #FFFFFF;
+	padding:100px;
+}
+
+
+
+/* -- Portfolio ------------------------------- */
+/* -------------------------------------------- */
+
+#portfolio h1 {
+	padding:50px 80px 50px 80px;
+}
+
+.portfolioImages {
+	background-color:#FFFFFF;
+	padding:0 120px 50px 120px;
+}
+
+.portfolioImages h2 {
+	color:#000000;
+	padding-bottom:50px;
+	padding-top:50px;
+}
+
+.gridPaysages {
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:300px 300px 300px;
+	gap:15px;
+}
+
+.gridPaysages img, .gridPortraits img {
+	height:100%;	/* permet de dire que l'image s'adapte à la hauteur de la grille */
+	object-fit:cover;	/* permet de dire que l'image ne soit pas "stretch" */
+	width:100%;	/* permet de dire que l'image s'adapte à la largeur de la grille */
+}
+
+.gridPortraits {
+	display:grid;
+	grid-template-columns:1fr 1fr 1fr;
+	grid-template-rows:300px 300px;
+	gap:15px;
+}
+
+
 
 /* -- ANIMATIONS ------------------------------ */
 /* -------------------------------------------- */
@@ -182,4 +274,28 @@ ul li {
 
 header a:hover {
 	text-decoration:underline;
+}
+
+.photoHoverConteneur {
+	position:relative;  /* les élements enfants en position absolue se positionnent par rapport à ce block*/
+}
+
+.photoHover {
+	background-color:rgba(0,0,0,0.7);
+	font-size:1.5rem;
+	display:none;	/* Permet de masquer l'élement */
+	align-items:center; /* Centre l'élement (bien que masqué) */
+	justify-content:center;	/* idem */
+
+	position:absolute; /* Se positionne par rapport au parent en position relative */
+	bottom:0;
+	left:0;
+	right:0;
+	top:0;	/* permet de faire un carre de la même taille que le parent */
+	color:#FFFFFF;
+
+}
+
+.photoHoverConteneur:hover .photoHover { /* A RETENIR */
+	display:flex;	/* remplace la valeur display:none quand detecte hover, et donc affiche le black */
 }
