@@ -34,7 +34,7 @@
 						<h1>Robbie Lens Photographie</h1>
 						<p> Où <em class="important">professionalisme</em> s'allie avec <em class="important">passion</em>. Depuis plus de 5 ans maintenant, j'exerce mon métier avec la passion qui m'anime : capturer l'essence de chaque instant.</p>
 						<div class="boutonCta">
-							<a href="" class="cta">Un projet ? écrivez-moi</a>
+							<a href="#formulaire" class="cta">Un projet ? écrivez-moi</a>
 						</div>
 
 					</div>
@@ -189,20 +189,40 @@
 
 			</section>
 			
+			<div class="fondTriangle">
 			<div class="triangle">
 			</div>
+			</div>
 
-			<section class="formulaire">
+			<section id="formulaire">
 			
 				<h1>Parlons de votre projet</h1>
 
 				<form action="" method="get">
-				<label for="nom">nom</label>
-				<input type="text" name="nom" id="nom" placeholder="Ex : Isabelle" />
-				<label for="mail">email</label>
-				<input type="email" name="mail" id="mail" placeholder="Ex : zaz@belle.fr" />
-				<label for="msg">message</label>
-				<textarea name="msg" id="msg"></textarea>
+
+				<div class="conteneurFormulaire">
+					<div class="conteneurHaut">
+						<div class="conteneurNom">
+						<label for="nom">nom</label>
+						<input type="text" name="nom" id="nom" placeholder="Ex : Isabelle" />
+						</div>
+
+						<div class="conteneurMail">
+						<label for="mail">email</label>
+						<input type="email" name="mail" id="mail" placeholder="Ex : zaz@belle.fr" />
+						</div>
+
+					</div>
+				
+					<div class="conteneurBas">
+					<label for="msg">message</label>
+					<textarea name="msg" id="msg" rows="10"></textarea>
+					</div>
+				</div>
+				
+				<div class="boutonCta">
+				<input class="cta" type="submit" value="Envoyer">
+				</div>
 
 			</section>
 

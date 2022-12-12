@@ -230,7 +230,7 @@ td {	/* Lignes du tableau */
 
 .portfolioImages {
 	background-color:#FFFFFF;
-	padding:0 120px 50px 120px;
+	padding:0 120px 70px 120px;
 }
 
 .portfolioImages h2 {
@@ -262,10 +262,86 @@ td {	/* Lignes du tableau */
 /* -- FORMULAIRE ----------------------------- */
 /* ------------------------------------------- */
 
-.triangle {
-	background-color: red;
-	height:50px;
+.fondTriangle{
+	background-color:#FFFFFF;
 }
+
+.triangle {
+	background-color:#1F2039;
+	clip-path:polygon(0% 100%, 50% 0%, 100% 100%);	/*Entraintement pour faire un triangle */
+	height:50px;
+
+}
+
+#formulaire {
+	color:#FFFFFF;
+	margin:auto;
+	width:70%;
+}
+
+#formulaire h1 {
+	font-size:1.5em;
+	padding-bottom:60px;
+	padding-top:80px;
+	text-align:center;
+}
+
+#formulaire input {
+	border-radius:5px;
+	margin-top:10px;
+	padding:15px;
+}
+
+#formulaire textarea {
+	border-radius:5px;
+	margin-top:10px;
+	padding:15px;
+}
+
+#formulaire .cta {
+	border-radius:50px;
+	padding:20px 60px 20px 60px;
+	font-family:"Manrope",sans-serif;
+	font-size:1.1em;
+	text-align:center;
+}
+
+#formulaire .boutonCta {
+	display:flex;
+	justify-content:center;
+	margin-bottom:80px;
+}
+
+.conteneurFormulaire {
+	display:flex;
+	flex-direction:column;
+}
+
+.conteneurHaut {
+	display:flex;
+	flex-direction:row;
+	gap:15px;
+	margin-bottom:30px;
+}
+
+.conteneurNom {
+	display:flex;
+	flex:1;		/*Permet de donner une valeur relative par rapport aux flex des autres éléments */
+	flex-direction:column;
+}
+
+.conteneurMail {
+	display:flex;
+	flex:1;	/*Les deux éléments flex ont la même valeur : ils occupent chacun 50% de l'espact dispo */
+	flex-direction:column;
+}
+
+.conteneurBas {
+	display:flex;
+	flex:1;
+	flex-direction:column;
+}
+
 
 /* -- ANIMATIONS ------------------------------ */
 /* -------------------------------------------- */
