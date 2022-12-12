@@ -201,20 +201,20 @@ ul li {
 	padding-bottom:50px;
 }
 
-table {
+table {		/* Tableau */
 	border-collapse:collapse;
 	color:#FFFFFF;
 	margin:auto;
 
 }
 
-th {
+th {	/* Ligne d'en-têtes des colonnes du tableau */
 	border:1px solid #FFFFFF;
 	padding-top:40px;
 	padding-bottom:40px;
 }
 
-td {
+td {	/* Lignes du tableau */
 	border:1px solid #FFFFFF;
 	padding:100px;
 }
@@ -259,7 +259,13 @@ td {
 	gap:15px;
 }
 
+/* -- FORMULAIRE ----------------------------- */
+/* ------------------------------------------- */
 
+.triangle {
+	background-color: red;
+	height:50px;
+}
 
 /* -- ANIMATIONS ------------------------------ */
 /* -------------------------------------------- */
