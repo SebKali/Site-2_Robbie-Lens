@@ -226,7 +226,81 @@ td {	/* Lignes du tableau */
 	padding:100px;
 }
 
+/* -- CARTE TARIFS --------------------- */
+/* ------------------------------------- */
 
+.card {
+	border-radius:10px;
+	box-shadow:10px 10px 15px rgba(0,0,0,0.8);
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:210px 210px 60px;
+	margin:auto;
+	margin-top:20px;
+	margin-bottom:60px;
+	width:300px;
+
+
+	transition:0.5s ease;
+	cursor:pointer;
+}
+
+.cardImage{
+	background:url("images/appareilphoto.jpg");
+	background-position:center;
+	background-size:cover;
+	border-radius:10px 10px 0 0;
+	border-bottom-width:3px; 
+	border-bottom-style:solid;
+	border-image:linear-gradient(to right, #8E86B5, #ACAEED) 1;
+}
+
+.cardTexte {
+	background-color:#FFFFFF;
+	
+	font-size:1em;
+	text-align:center;
+}
+
+.cardTexte .duree {
+	background:linear-gradient(to right, rgb(1,157,208),rgb(215,176,239) 75%);
+	color:white;
+	display:block;
+	font-size:0.8em;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.cardTexte h1 {
+	font-size:1em;
+	padding-bottom:10px;
+}
+
+.cardTexte .texteInterieur {
+	color:#000000;
+	font-size:0.8em;
+	padding:0px 20px 0px 20px;
+}
+
+.cardPrix {
+	background:linear-gradient(45deg, #8E86B5,#ACAEED);
+	border-radius:0px 0px 10px 10px;
+	display:grid;
+	grid-template-columns:1fr 1fr;
+	grid-template-rows:1fr;
+}
+
+.cardPrix .Stat1, .cardPrix .Stat2 {
+	display:flex;
+	justify-content:center;
+	font-size:1em;
+	text-align:center;
+	align-items:center;
+}
+
+.Stat1 {
+	border-right:2px solid #FFFFFF;
+}
 
 /* -- Portfolio ------------------------------- */
 /* -------------------------------------------- */
@@ -393,10 +467,15 @@ header a:hover {
 	display:flex;	/* remplace la valeur display:none quand detecte hover, et donc affiche le black */
 }
 
+.card:hover {  /* A RETENIR -- permet d'agrandir au survol !! */
+	transform:scale(1.1);
+	box-shadow:10px 10px 15px rgba(0,0,0,0.5);
+}
+
 /* --- MEDIA QUERY ---------------------------- */
 /* -------------------------------------------- */
 
-@media screen and (max-width:1024px) {
+@media screen and (max-width:980px) {
 	
 	.main_page {
 		margin:auto;
@@ -508,6 +587,18 @@ header a:hover {
 		margin-top:80px;
 	}
 	
+	/* -- CARD TARIFS ------------- */
+	/* ---------------------------- */
+
+	.card {
+		font-size:1.2em;
+		width:50%;
+		grid-template-rows:300px 250px 80px;
+	}
+
+	.cardTexte .duree {
+		margin-bottom:40px;
+	}
 	/* --- TARIFS --------------- */
 	/* -------------------------- */
 
