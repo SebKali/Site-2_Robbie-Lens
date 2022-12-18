@@ -156,8 +156,11 @@ footer a {
 #a_propos {
 	background-color:#1F2039;
 	margin:auto;
-	padding:80px;
-	width:50%;
+	padding:80px 0px 80px 0px;
+}
+
+#a_propos h1 {
+	text-align:center;
 }
 
 #a_propos .boutonCta {
@@ -172,6 +175,9 @@ h2 {
 	border-bottom:1px #A5B4FC solid;
 	border-right:1px #A5B4FC solid;
 	padding:50px 30px 30px 30px;
+
+	width:50%;
+	margin:auto;
 }
 
 .service {
@@ -673,7 +679,6 @@ header a:hover {
 	
 	#a_propos {
 		text-align:center;
-		width:80%;
 	}
 
 	#a_propos ul li {
@@ -684,6 +689,10 @@ header a:hover {
 		padding:0px;
 	}
 	
+	.carre_contenu {
+		width:80%;
+	}
+
 	.boutonCta {
 		margin-top:80px;
 	}
@@ -755,6 +764,19 @@ header a:hover {
 @media screen and (max-width:790px) {
 
 	.main_page {
-		width:100vh
+		margin:auto;
+		width:100%;
+	}
+
+	.cardFront1 h1, .cardFront2 h1 {
+		font-size:1em;
+	}
+	
+}
+
+@media screen and (max-width:480px) {
+	.main_page {
+		margin:auto;
+		width:100vh;
 	}
 }
