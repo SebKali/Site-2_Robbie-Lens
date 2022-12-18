@@ -231,7 +231,15 @@ td {	/* Lignes du tableau */
 
 .card:hover .content {
 	transform:rotateY(180deg);
-	transition:transform 1s;
+	transition:transform 0.5s;
+}
+
+.cardConteneur {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-around;
+
+	padding:0px 150px 0px 150px;
 }
 
 .card {
@@ -252,35 +260,80 @@ td {	/* Lignes du tableau */
 	height:100%;
 	box-shadow:10px 10px 15px rgba(0,0,0,0.8);
 
-	transition:transform 2s; /* Durée de retournée de la carte */
+	transition:transform 0.8s; /* Durée de retournée de la carte */
 	transform-style:preserve-3d;	/* permet d'avoir la 3D sur la carte */
 
 }
 
-.cardFront {
+.cardFront1, .cardFront2 {
+	border-radius:10px;
 	position:absolute; /* Permet aux deux cartes d'être l'une sur l'autre */
+	height:100%;
+	width:100%;
 
 	display:grid;
 	grid-template-columns:1fr;
 	grid-template-rows:210px 210px 60px;
+	
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
 
 /*	backface-visibility:hidden;*/
 }
 
+.cardFront1 {
+	background:linear-gradient(to top right, #4568dc, #b06ab3);
+}
+
+.cardFront2 {
+	background:linear-gradient(to top right, #1f1c2c, #928dab);
+}
+
+.cardFront1 h1, .cardFront2 h1 {
+	border-top:2px solid #FFFFFF;
+	border-bottom:2px solid #FFFFFF;
+	font-size:2em;
+	color:#FFFFFF;
+	padding:15px;
+
+	margin-left:20px;
+	margin-right:20px;
+
+}
+
+
 .cardBack {
+	border-radius:10px;
 	position:absolute;
 	height:100%;
 	width:100%;
 
 	color:white;
-	background:red;
+	background:linear-gradient(to top right, #4568dc, #b06ab3);
 	transform:rotateY(180deg);	/* permet d'avoir la carte dans le bon sens */
 	backface-visibility:hidden; /* masque un côté au hover */
+
+	display:grid;
+	grid-template-columns:1fr;
+	grid-template-rows:210px 210px 60px;
+
 }
 
 
-.cardImage{
+.cardImage1{
 	background:url("images/appareilphoto.jpg");
+	background-position:center;
+	background-size:cover;
+	border-radius:10px 10px 0 0;
+	border-bottom-width:3px; 
+	border-bottom-style:solid;
+	border-image:linear-gradient(to right, #8E86B5, #ACAEED) 1;
+}
+
+.cardImage2{
+	background:url("images/studiophoto.jpg");
 	background-position:center;
 	background-size:cover;
 	border-radius:10px 10px 0 0;
@@ -296,8 +349,17 @@ td {	/* Lignes du tableau */
 	text-align:center;
 }
 
-.cardTexte .duree {
+.cardTexte .duree1 {
 	background:linear-gradient(to right, rgb(1,157,208),rgb(215,176,239) 75%);
+	color:white;
+	display:block;
+	font-size:0.8em;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+
+.cardTexte .duree2 {
+	background:linear-gradient(to right, #1f1c2c,#928dab 45%);
 	color:white;
 	display:block;
 	font-size:0.8em;
@@ -510,7 +572,9 @@ header a:hover {
 
 
 /* --- MEDIA QUERY ---------------------------- */
-/* -------------------------------------------- */
+
+/* ---------------- MEDIUM ----------------------------
+------------------------------------------------------- */
 
 @media screen and (max-width:980px) {
 	
@@ -626,6 +690,11 @@ header a:hover {
 	
 	/* -- CARD TARIFS ------------- */
 	/* ---------------------------- */
+	
+	.cardConteneur {
+		flex-direction:column;
+		padding:0;
+	}
 
 	.card {
 		font-size:1.2em;
@@ -679,6 +748,9 @@ header a:hover {
 		margin-bottom:20px;
 	}
 }
+
+/* ------------ SMALL --------------------
+-------------------------------- */
 
 @media screen and (max-width:790px) {
 
